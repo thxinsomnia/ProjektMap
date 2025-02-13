@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Map</title>
+  <title>Map Pickme & Pop Up Openlayers</title>
   <link rel="stylesheet" href="https://cdn.skypack.dev/ol/ol.css">
   <link rel="stylesheet" href="main.css">
 </head>
@@ -17,11 +17,11 @@
         &#9776;
       </div>
       <div class="menu" id="menu">
-        <button id="set-source" class="btn" style="display: none;">Show Layer</button>
-        <button id="unset-source" class="btn btn-danger">Hide Layer</button>
-        <button id="back-to-location" class="btn btn-success">Back to My Location</button>
+        <button id="set-source" class="btn" style="display: none;">Tampilkan Map</button>
+        <button id="unset-source" class="btn btn-danger">Sembunyikan Map</button>
       </div>
     </div>
+    <img id="back-to-location" src="assets/img/livelocation.png" alt="Live Location" class="live-location">
   </main>
   
   <script type="module" src="main.js"></script>

@@ -197,7 +197,7 @@ backToLocationButton.onclick = function () {
     marker.setStyle(
       new Style({
         image: new Icon({
-          src: "./assets/img/pin.png",
+          src: "./assets/img/orang.png",
           scale: 0.5,
         }),
       })

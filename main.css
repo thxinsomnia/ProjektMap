@@ -1,0 +1,186 @@
+@import "https://cdn.skypack.dev/ol/ol.css";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#map {
+  flex: 1;
+  position: relative;
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+}
+
+.popup {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 320px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.popup p {
+  font-size: 14px;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup .close-btn:hover {
+  background: #d63031;
+}
+
+.controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #27ae60; /* Primary button color (green) */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  position: relative;
+}
+
+.btn:hover {
+  background-color: #219150; /* Hover color for primary button */
+}
+
+.btn-danger {
+  background-color: #e67e22; /* Danger button color (orange) */
+}
+
+.btn-danger:hover {
+  background-color: #d35400; /* Hover color for danger button */
+}
+
+.btn-success {
+  background-color: #e74c3c; /* Success button color (red) */
+}
+
+.btn-success:hover {
+  background-color: #c0392b; /* Hover color for success button */
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: black;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* Hide the control options by default */
+.menu {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Optional: Add some styles for control buttons */
+.menu .btn {
+  margin: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Add styles for when the menu is open */
+.menu.open {
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .popup {
+    width: 200px;
+    font-size: 14px;
+  }
+
+  .controls {
+    top: 5px;
+    right: 5px;
+    gap: 5px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+  }
+
+  .hamburger {
+    font-size: 24px;
+    top: 5px;
+    right: 5px;
+  }
+}

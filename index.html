@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Map</title>
+  <link rel="stylesheet" href="https://cdn.skypack.dev/ol/ol.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <main>
+    <div id="map"></div>
+    <div class="controls">
+      <div class="hamburger" id="hamburger">
+        &#9776;
+      </div>
+      <div class="menu" id="menu">
+        <button id="set-source" class="btn" style="display: none;">Show Layer</button>
+        <button id="unset-source" class="btn btn-danger">Hide Layer</button>
+        <button id="back-to-location" class="btn btn-success">Back to My Location</button>
+      </div>
+    </div>
+  </main>
+  
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>

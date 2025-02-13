@@ -55,7 +55,7 @@ navigator.geolocation.getCurrentPosition(
     marker.setStyle(
       new Style({
         image: new Icon({
-          src: "assets/img/orang.png",
+          src: "./assets/img/orang.png",
           scale: 0.5,
         }),
       })
@@ -136,7 +136,7 @@ map.on("click", function (event) {
   marker.setStyle(
     new Style({
       image: new Icon({
-        src: "assets/img/pin.png",
+        src: "./assets/img/pin.png",
         scale: 0.5,
       }),
     })
@@ -197,7 +197,7 @@ backToLocationButton.onclick = function () {
     marker.setStyle(
       new Style({
         image: new Icon({
-          src: "assets/img/pin.png",
+          src: "./assets/img/pin.png",
           scale: 0.5,
         }),
       })
